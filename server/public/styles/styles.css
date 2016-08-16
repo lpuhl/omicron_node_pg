@@ -1,0 +1,13 @@
+h1 {
+  font-family: 'Taviraj', serif;
+  color: indigo;
+}
+
+h2 {
+  color: gray;
+}
+
+#publisher {
+  font-family: Geneva, sans-serif;
+  font-style: italic;
+}
