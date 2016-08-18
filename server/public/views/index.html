@@ -31,20 +31,22 @@
         </div>
 
         <div class="form-group">
-          <label for="edition">Edition:</label>
-          <input type="number" id="edition" name="edition"  class="form-control"/>
+          <label for="genre">Genre:</label>
+          <input type="text" id="genre" name="genre"  class="form-control"/>
         </div>
 
-        <div class="form-group">
-          <label for="publisher">Publisher:</label>
-          <input type="text" id="publisher" name="publisher"  class="form-control"/>
-        </div>
-
-        <button id="book-submit" class="btn btn-default">Go</button>
+        <button id="book-submit" class="btn btn-default">Add</button>
 
       </form>
 
       <h2>Books</h2>
+      <select id="genre-select" >
+        <option value="fantasy">Fantasy</option>
+        <option value="mystery">Mystery</option>
+        <option value="nonfiction">Nonfiction</option>
+        <option value="biography">Biography</option>
+      </select>
+      <button id="genre-submit" class="btn btn-default">Go</button>
       <ul id="book-list">
 
       </ul>
