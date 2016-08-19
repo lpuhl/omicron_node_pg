@@ -2,7 +2,6 @@ $(document).ready(function () {
   getBooks();
 
   //select by genre
-
   $('#genre-submit').on('click', getByGenre);
     // add a book
   $('#book-submit').on('click', postBook);
