@@ -13,16 +13,17 @@ $(document).ready(function () {
  */
 
  function getByGenre() {
+   $('#book-list').empty();
    var genreSelected = $('#genre-select').val();
+   console.log (genreSelected);
   $.ajax({
     type: 'GET',
-    url: '/books/' + genre,
+    url: '/books/' + genreSelected,
     success: function (books) {
-
       console.log('GET /books returns:', books);
- //      books.forEach(function (book) {
- //        var $el = $('<div></div>');
- //        var bookProperties = ['title','author','published','genre'];
+      books.forEach(function (book) {
+        var $el = $('<div></div>');
+        var bookProperties = ['title','author','published','genre'];
 
         bookProperties.forEach(function(property){
           var inputType = 'text';
@@ -39,7 +40,7 @@ $(document).ready(function () {
           $input.val(book[property]);
           $el.append($input);
         });
-        $el.data('bookId',book.id);
+        $el.data('bookId', book.id);
         //we use this to uniquely identify it by the book.id
         $el.append('<button class ="update">Update</button>');
         $el.append('<button class ="delete">Delete</button>');
